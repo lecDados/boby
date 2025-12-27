@@ -25,7 +25,7 @@ p::after{
     top: 5px;
     left: 7px;
     content: "";
-    background-image: url("img/Vector-seta.svg");
+    background-image: url("Vector-seta.svg");
     height: 20px;
     width: 20px;
     position: relative;
