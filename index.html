@@ -1,24 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tela inicial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <h2>Ben-vindo! diga olá para o Boby</h2>
-    <div id="div1">
-        
-        <img src="img_bot_boby.png" alt="" srcset="">
-        <p id="entra">Boby</p>
-    </div>
-   <script>
-  const div = document.getElementById("entra");
 
-  div.addEventListener("click", () => {
-    window.location.href = "log.html";
-  });
+<header>
+  <div id="logo"><h1>BOBY</h1></div>
+  
+  <div id="menu">
+    <ul>
+      <li class="traco">TUTORIAL</li>
+      <li class="traco">SOBRE</li>
+      <li class="traco">VER BOBY</li>
+    </ul>
+  </div>
+</header>
+
+<section class="corpo"><!--Pai-->
+  <div id="bot">
+    <div id="info">
+      <h1>GIFT CARD</h1>
+      <h2>PARTICIPE DE SORTEIOS</h2>
+      <p>ENTRE COM O TELEGRAM E PARTICIPE. VÁRIOS PREMEIOS PATROCINADOS.</p>
+      <button>Iniciar bot</button>
+      <div id="redes_sociais">
+      <ul>
+        <li id="instagram"></li>
+        <li id="githube"></li>
+        <li id="linkedin"></li>
+      </ul>
+    </div>
+      <div id="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IpSDW3Mq-7E?si=WbUEo_xJK8RdWs34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+    </div>
+  </div>
+  <div id="cards">
+    <div id="gift_card">
+
+      <h2>GIFT-CARD/JOGOS (Sorteio do grupo)</h2>
+      <div id="xbox"><h1>Xbox</h1><p>Gift card disponivel</p></div>
+      <div id="playstore"><h1>GooglePlay</h1><p>Val. disponivel ate R$50</p></div>
+      <div id="plastation"><h1>Playstation</h1><p>Val. disponivel ate R$100</p></div>
+      <div id="callofduty"><h1>CallofDuty</h1><p>Popular</p></div>
+      <div id="minecraft"><h1>Minecraft</h1><p>Popular</p></div>
+      <div id="gta6"><h1>GTA VI</h1><p>Em breve!</p></div>
+      
+      <button>Participar</button>
+      <a href="">saiba mais</a>
+    </div>
+</section>
+
+<section class="atrativo"><!--Pai-->
+  <div id="banner">
+      <div class="banner-texto">TA ACONTECENDO UM SORTEIO AGORA</div>
+      <div class="banner-texto2">Clique em iniciar bot</div>
+    </div>
+  </div>
+  <section class="tutorial">
+    <h2>Sorteio ao-vivo</h2>
+    <p>Você sera informado quando tiver sorteios no grupo do telegram, nesse<a href="LINK_DO_BOT"> link aqui</a>.
+    Os sorteios são patrocinados por criadores de conteudo e pessoas que deseja ajudar
+    essa iniciativa. 
+  
+    Tudo é feito com muita transparencia, e dentro da legalidade. Os sorteios são
+    trasmitidos ao-vivo nesse canal do <a href="LINK_DO_YOUTUBE">youtube aqui</a>, siga o canal
+    e ative o sininho para não perder nenhum sorteio.
+    
+    Caso não possa participar do sorteio, nós entraremos em contato se você ganhar.
+    você tera até 7 dias para pegar seu premio.</p>
+    <h2>Tipos de premio</h2>
+    <p>Você encontrarar uma diversidade de premios, desde um gift card de R$5, ate mesmo um PC gamer.
+      É importante que ao participar do sorteio tenha conhecimento dos premios a serem sorteados.
+      Todos os premios são doados pelos <a href="PATROCINADORES">Patrocinadores</a>, exeto os GIFT CARD que serão 
+      sorteados 2 vezes no mês, e os valores são anunciados no grupo.   
+
+    </p>
+    
+    
+  </section>
+  <div id="patrocinador">
+      <h3>Patrocinadores</h3>
+      <div class="pessoas">
+      <div>
+        <img src="luiz_patrocinador.png" alt="">
+      <p>Luiz Eduardo</p>
+      <a href="http://">ver</a>
+      </div>
+      <div>
+        <img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a>
+      </div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+      <div><img src="mai.jpg" alt="">
+      <p>Sem patrocinador ainda</p>
+      <a href="http://">ver</a></div>
+    </div>
+    </div>
+</section>
+<footer></footer>
+
+
+<script src="script.js"></script>
+
+<!-- SCRIPT DO CARROSSEL -->
+<script>
+const banners = [
+  "baner1.jpeg",
+  "baner3.jpeg",
+  "baner4.jpeg",
+  "baner5.jpeg",
+  "baner6.jpeg",
+  "baner7.jpeg",
+  "baner8.jpeg",
+  "baner9.jpeg",
+  "baner10.jpeg",
+  "baner11.jpeg"
+];
+
+let i = 0;
+const banner = document.getElementById("banner");
+
+banner.style.backgroundImage = `url("${banners[0]}")`;
+
+setInterval(() => {
+  i = (i + 1) % banners.length;
+  banner.style.backgroundImage = `url("${banners[i]}")`;
+}, 5000);
 </script>
 
 </body>

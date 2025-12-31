@@ -1,78 +1,795 @@
+html, body {
+  margin: 0;
+}
 body{
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: #111111;
+    background-image: linear-gradient(40deg,#565c3d,#111111, #111111 , #111111, #AABF4C);
     text-align: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   
+}
 
-    align-content: center;
+.corpo{
     min-height: 100vh;
+}
+header{
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: 80px;
+
+    background: rgba(17, 17, 17, 0.11);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari */
+  box-shadow: 1px 1px 10px #0000001c;
+}
+header #logo{
+    position: absolute;
+    left: 200px;
+    color: #d8ff28;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+header #menu{
+    position: absolute;
+    right: 100px;
+}
+.traco::before{
+    content: "";
+    height: 5px;
+    width: 5px;
+    position: fixed;
+    top: 40px;
+    transition: .8s;
     
 }
-h1{
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: aliceblue;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+.traco:hover::before{
+    width: 80px;
+    transition: .8s;
+    background-color: #d8ff28;    
 }
-section{
-    background-color: #37393a9f;
-    height: auto;
-    padding: 10px;
-    border-radius: 30px;
-    width: 200px;
+#menu ul{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-input{
-    padding: 5px;
-    padding-left: 12px;
-    border-radius: 15px;
-    outline: none;
-    border: none;
-    background-color: #696969b7;
-    color:#dbfcfd; 
-}
-input::placeholder{
-    color: rgba(240, 248, 255, 0.473);
-}
-button{
-    background-color:#169599 ;
-    color: #dbfcfd;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    padding: 5px;
-    width: 100px;
-    margin-top: 10px;
+    flex-direction: row;
+    gap: 100px;
     cursor: pointer;
 }
-p{
-    color: #dbfcfd;
+#menu li{
+    cursor: pointer;
+list-style:none;
+color: #fefffa;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.corpo{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+#bot{
+    position: absolute;
+    height: auto;
+    width: 500px;
+    left: 200px;
+    
+}#bot h1{
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+    text-align: left;
+  margin-left: 0;
+}
+#bot h2{
+    position: absolute;
+    top: 110px;
+    text-align: left;
+  margin-left: 0;
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+}
+#bot p{
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+     text-align: left;
+  margin-left: 0;
+}
+#bot button{
+    position: absolute;
+    top: 100px;
+    left: 480px;
+    width: 100px;
+    border-radius:20px 40px;
+    border: none;
+    background-color: #dcf85e;
+    padding: 5px 0px;
+    color: #111111;
+    
+}
+#video{
+    padding: 20px;
+    position: relative;
+    background-color: #36363681;
+    border-radius: 20px;
+    height: 300px;
+    width: 100%;
+    margin:100px 40px ;
+    text-align: left;
+  margin-left: 0;
+}
+#video iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+#cards{
+    position: absolute;
+    
+    width: 700px;
+    right: 40px;
+    
+}
+#gift_card{
+    background-color: #ffffff15;
+    border-radius: 40px;
+    margin: 40px 40px;
+    height: 730px;
+    padding-top: 60px;
+    gap: 10px;
+    position: relative;
+    justify-items: center;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+
+    
+}
+#gift_card a{
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  color: #d8ff28;
+}
+#gift_card div{
+    height: 310px;
+    width: 180px;
+    box-shadow: 1px 1px 10px #000000;
+    
+}
+#gift_card button{
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    border-radius:20px 40px;
+    border: none;
+    background-color: #dcf85e;
+    padding: 5px 0px;
+    color: #111111;
+    left: 40px;
+
+}
+#gift_card h2{
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    color: #fefffa;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
-input:focus{
-  background-color: #696969b7;
-  color: #dbfcfd;
-  outline: none;
+#gift_card h1{
+    position: absolute;
+    margin-top: 40px;
+    left: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-@media (max-width: 400px) {
-  section {
-    background-color: #37393a9f;
-    height: auto;
+#gift_card p{
+    text-align: left;
+    color: #d8ff28;
+    z-index: 1;
+position: absolute;
+top: 245px;
+left: 5px;
+font-size: 13px;
+text-shadow:-10px -5px 10px #000;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#redes_sociais{
+    margin: 0 20px ;/*aqui*/
+    height: 50px;
+    justify-items: center;
+}
+#redes_sociais ul{
+    position: relative;
+    top: 65px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    left: -170px;
+}
+#redes_sociais li{
+    scale: 0.4;
+   width: 80px;
+    list-style: none;
+    height: 80px;
+    border-radius: 15px;
+    transition: .8s;
+}
+#redes_sociais li:hover{
+    cursor: pointer;
+    scale: .8;
+    transition: .8s;
+}
+#instagram{
+    background-image: url("instagram.svg");
+    
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#githube{
+    background-image: url("github.svg");
+    
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#linkedin{
+    background-image: url("linkedin.svg");
+   
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#banner{
+  margin: 40px;
+  height: 220px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 20px #000000;
+  position: relative;   /* OBRIGATÓRIO */
+  z-index: 0;
+  display: block;
+}
+#banner::after{
+  content: "";          /* OBRIGATÓRIO */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1111116c;
+  border-radius: 15px;
+  z-index: 1;           /* sobreposto */
+}
+.banner-texto{
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  left: 20px;
+  bottom: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 1px 10px #111111;
+}
+.banner-texto2{
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 20px;
+  left: 20px;
+  bottom: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 1px 10px #111111;
+}
+#xbox{
+    background-image: url("xbox.jpeg");
+height: 300px;
+    width: 180px;
+    
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+  
+  
+}
+#xbox h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000; 
+}
+#playstore{
+    background-image: url("googleplay.jpeg");
+height: 300px;
+    width: 180px;
+
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+}
+#playstore h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000;
+}
+#plastation{
+    background-image: url("paystation.jpeg");
+height: 300px;
+    width: 180px;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+}
+#plastation h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000;
+}
+#callofduty{
+    background-image: url("callofduty.jpeg");
+height: 300px;
+    width: 180px;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+  
+}
+#callofduty h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000;
+}
+#minecraft{
+    background-image: url("minecraft.jpeg");
+height: 300px;
+    width: 180px;
+    
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+}
+#minecraft h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000;
+}
+#gta6{
+    background-image: url("gta6.jpeg");
+height: 300px;
+    width: 180px;
+    
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .8s;
+  position: relative;
+  overflow: hidden;
+}
+#gta6 h1{
+    z-index: 1;
+position: absolute;
+top: 190px;
+left: 5px;
+text-shadow:-10px -5px 10px #000;
+}
+#callofduty:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#playstore:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#plastation:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#xbox:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#minecraft:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#gta6:hover{
+    scale: 1.1;
+    transition: .8s;
+}
+#gift_card div::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(17, 17, 17, 0.856);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari */
+  box-shadow: 1px 1px 10px #000;
+}
+/*TELA2: atrativo*/
+.atrativo{
+    padding-left: 150px;
+    padding-right: 40px;
+    min-height: 100vh;
+    
+    
+}
+h2,
+p,
+.atrativo h1{
+    
+    color: #ffffff9a;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.atrativo a{
+    color: #d8ff28;
+}
+.tutorial{
+    width: 500px;
+    padding-left: 50px;
+    
+    overflow: hidden;
+    word-wrap: break-word;
+}
+#patrocinador{
+    position: absolute;
+    background: radial-gradient(
+  closest-side at center,
+  #f7f8f427,
+  #f3f3f305
+);
+    border-radius: 15px;
+    height: 450px;
+    width: 700px;
+    right: 100px;
+    bottom: 120px;
+}
+#patrocinador h3{
+    text-align: left;
+    color: #fefffa;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    margin-left: 20px;
+}
+#patrocinador h3::after{
+    content: "";
+    background-image: url("verificado.svg");
+    filter: invert(1);
+    position: absolute;
+    top: 2px;
+    left: 140px;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.pessoas{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 50%;
     padding: 10px;
-    border-radius: 30px;
-    width: 200px;
+    box-sizing: border-box;
+}
+.pessoas div{
+    height: 80px;
+    background-color: #ffffff44;
+    border-radius: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    position: relative;
+}
+.pessoas img{
+    background-color: #d8ff28;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.pessoas a{
+    position: absolute;
+    left: 300px;
+}
+
+@media (max-width: 1517px){
+  
+  .atrativo{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    scale: 1.4;
+    height: 250vh;
+  }
+  .tutorial{
+    position: relative;
+    top: 1040px;
+    margin-bottom: 100px;
+  }
+  #patrocinador {
+    
+    bottom:10px ;
+
+    left: 150px;
+  }
+  .corpo{
+    display: flex;
+    flex-direction: column;
+    columns: 1;
+  }
+  #cards{
+    position: absolute;
+    left: 150px;
+    top: 1320px;
+  }
+  #banner{
+    position: relative;
+    margin-top: -40px;
+    
+  }
+  
+}
+@media (max-width: 499px){
+  
+  #bot h1{
+    font-size: 50px;
+  }
+  #bot h2{
+    font-size: 30px;
+  }
+    .atrativo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+  }
+  .tutorial{
+    display: none;
+    
+  }
+  .tutorial h2{
+    position: absolute;
+    color: #d8ff28;
+    text-align: left;
+    height: 500px;
 
   }
+  .tutorial p{
+    position: absolute;
+    color: #d8ff28;
+    text-align: left;
+    height: -500px;
+
+  }
+  #patrocinador {
+    bottom:350px ;
+    width: 330px;
+    left: 20px;
+  }
+  #patrocinador div{
+    width: 300px;
+  }
+  #patrocinador p{
+    position: relative;
+    text-align: left;
+    left: 10px;
+  }
+  #patrocinador a{
+    position: absolute;
+    left: 270px;
+    
+  }
+  .corpo{
+    display: flex;
+    flex-direction: column;
+    columns: 1;
+  }
+  #cards{
+    max-width:500px;
+    position: relative;
+    left: 5px;
+    top: 1120px;
+    height: 100px;
+  }
+  #gift_card{
+    left: -10px;
+    width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;              
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 80px;
 }
+#gift_card h2{
+    margin-top: 30px;
+}
+#gift_card h1{
+text-align: left;
+position: relative;
+left: 10px;
+z-index: 1;
+}
+
+
+
+.corpo #xbox::after{
+  content:"GIFT CARD da Xbox";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 999;
+  position: absolute;
+  text-align: left;
+  padding-left: 10px;
+   
+}
+.corpo #playstore::after{
+  content: "GIFT CARD da GooglePlay";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  padding-left: 10px;
+}
+.corpo #plastation::after{
+  content: "GIFT CARD da PlaysTation";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  padding-left: 10px;
+}
+.corpo #callofduty::after{
+  content: "JOGOS Callofduty";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  padding-left: 10px;
+}
+.corpo #minecraft::after{
+  content: "JOGOS Minecraft";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  padding-left: 10px;
+}
+.corpo #gta6::after{
+  content: "EM BREVE AQUI GTA VI";
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #gift_card > *{
+  margin: 0;
+  padding: 0;
+}
+  #gift_card div{
+    height: 200px;
+    width: 120px;
+  }
+  #banner{
+    position: absolute;
+    margin-top: 10px;
+    width: 300px;
+    left: -10px;
+  }
+  .banner-texto{
+    text-align: left;
+  }
+  .pessoas{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  .pessoas div{
+    width: 400px;
+  }
+  h2,
+  p,
+  .corpo h1{
+    position: absolute;
+    left: -180px;
+  }
+  .corpo p{
+    width: 300px;
+    top: 180px;
+  }
+  #video{
+    position: absolute;
+    top: 400px;
+    left: -180px;
+    width: 290px;
+    height: 200px;
+  }
+  #redes_sociais{
+    position: absolute;
+    top: 190px;
+    left: -90px;
+  }
+  #bot button{
+    position: absolute;
+    left: -160px;
+    top: 380px;
+    scale: 1.3;
+  }
+  #logo h1{
+    position: absolute;
+    left: -180px;
+    top: -20px;
+  }
+  #menu ul{
+    gap: 20px;
+    left: 0px;
+  }
+  #menu{
+    position: absolute;
+    left: 120px;
+    display: none;
+  }
+  header{
+    width: 495px;
+position: fixed;
+  }
+}
+
