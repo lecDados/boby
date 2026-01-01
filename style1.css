@@ -568,7 +568,10 @@ p,
   
 }
 @media (max-width: 499px){
-  
+  html, body { /* Isso faz a magica, minha tela de 499, mantem as mesmas medida.*/
+  max-width: 100%;
+  overflow-x: hidden;
+}
   #bot h1{
     font-size: 50px;
   }
@@ -600,9 +603,9 @@ p,
 
   }
   #patrocinador {
-    bottom:350px ;
+    bottom:650px ;
     width: 330px;
-    left: 20px;
+    left: 40px;
   }
   #patrocinador div{
     width: 300px;
@@ -631,7 +634,7 @@ p,
   }
   #gift_card{
     left: -10px;
-    width: 300px;
+   width: 350px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;              
@@ -649,9 +652,6 @@ position: relative;
 left: 10px;
 z-index: 1;
 }
-
-
-
 .corpo #xbox::after{
   content:"GIFT CARD da Xbox";
   color: #ffffff;
@@ -730,9 +730,48 @@ z-index: 1;
   }
   #banner{
     position: absolute;
-    margin-top: 10px;
-    width: 300px;
+    margin-top: -100px;
+    right: -10px;
     left: -10px;
+  }
+  .item{
+    height: 100px;
+    width: 100%;
+    background-color:#1d1d1d;
+    position: absolute;
+    top: 210px;
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
+  }
+  .item p{
+    font-size: 20px;
+    left: 30px;
+    top: 10px;
+  }
+  .item button{
+    position: relative;
+    top:60px;
+    left: 120px;
+    width: 80px;
+    text-align: left;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    color: #fefffa;
+    background-color: #000000;
+  }
+  .item button::after{
+    content: "";
+    background-image: url("telegram.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center ;
+    filter: invert(1);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 10px;
+    top: 2.5px;
   }
   .banner-texto{
     text-align: left;
@@ -759,8 +798,15 @@ z-index: 1;
     position: absolute;
     top: 400px;
     left: -180px;
-    width: 290px;
+    width: 330px;
     height: 200px;
+    padding-top: 40px;
+  }
+  #video p{
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    font-size: 18px;
   }
   #redes_sociais{
     position: absolute;
