@@ -234,9 +234,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
-#banner::after{
 
-}
 .banner-texto{
   z-index: 2;
   color: #fff;
@@ -425,9 +423,7 @@ p,
 .atrativo a{
     color: #d8ff28;
 }
-.tutorial{
-    
-}
+
 #patrocinador{
     
     background: radial-gradient(
