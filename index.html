@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="B.png" type="image/jpeg">
+
+
 </head>
 <body>
 
@@ -26,7 +29,7 @@
       <h1>GIFT CARD</h1>
       <h2>PARTICIPE DE SORTEIOS</h2>
       <p id="text1">ENTRE COM O TELEGRAM E PARTICIPE. VÁRIOS PRÊMIOS PATROCINADOS.</p>
-      <button>Iniciar bot</button>
+      <button class="btn-telegram">Iniciar bot</button>
       <div id="redes_sociais">
       <ul>
         <li id="instagram"></li>
@@ -51,7 +54,7 @@
       <div id="minecraft"><h1>Minecraft</h1><p>Popular</p></div>
       <div id="gta6"><h1>GTA VI</h1><p>Em breve!</p></div>
       
-      <button>Participar</button>
+      <button class="btn-telegram">Participar</button>
       <a href="">saiba mais</a>
     </div>
 </section>
@@ -62,17 +65,17 @@
       <div class="banner-texto">JOGOS NOSTÁLGICOS</div>
       <div class="banner-texto2">Só entrar e participar</div>
       <div  class="item">
-        <p>Entrar direto no grupo</p> <button>Entrar</button></div>
+        <p>Entrar direto no grupo</p> <button class="btn-telegram">Entrar</button></div>
     </div>
   </div>
   <section class="tutorial">
     <h2>Sorteio ao-vivo</h2>
-    <p>Você sera informado quando tiver sorteios no grupo do telegram, nesse<a href="LINK_DO_BOT"> link aqui</a>.
+    <p>Você sera informado quando tiver sorteios no grupo do telegram, nesse<a href="https://t.me/GCardgp_bot"> link aqui</a>.
     Os sorteios são patrocinados por criadores de conteudo e pessoas que deseja ajudar
     essa iniciativa. 
   
     Tudo é feito com muita transparencia, e dentro da legalidade. Os sorteios são
-    trasmitidos ao-vivo nesse canal do <a href="LINK_DO_YOUTUBE">youtube aqui</a>, siga o canal
+    trasmitidos ao-vivo nesse canal do <a href="https://youtube.com/@boby_sorteios?si=rLCp-29w2FIs9EiJ">youtube aqui</a>, siga o canal
     e ative o sininho para não perder nenhum sorteio.
     
     Caso não possa participar do sorteio, nós entraremos em contato se você ganhar.
@@ -151,6 +154,30 @@ setInterval(() => {
   banner.style.backgroundImage = `url("${banners[i]}")`;
 }, 5000);
 </script>
+<script>
+  document.querySelectorAll('.btn-telegram').forEach(btn => {
+  btn.onclick = () => {
+    window.open('https://t.me/GCardgp_bot', '_blank');
+  };
+});
+document.querySelectorAll('#instagram').forEach(btn => {
+  btn.onclick = () => {
+    window.open('https://www.instagram.com/luiz.educardoso?igsh=MXh3cmQ1Nms5aXhucQ==', '_blank');
+  };
+});
+document.querySelectorAll('#githube').forEach(btn => {
+  btn.onclick = () => {
+    window.open('https://github.com/lecDados', '_blank');
+  };
+});
+document.querySelectorAll('#linkedin').forEach(btn => {
+  btn.onclick = () => {
+    window.open('https://www.linkedin.com/in/luiz-eduardo-4a6207384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank');
+  };
+});
+
+</script>
+
 
 </body>
 </html>
