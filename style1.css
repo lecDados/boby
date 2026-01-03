@@ -256,7 +256,7 @@ background-size: cover;
     text-shadow: 1px 1px 10px #111111;
 }
 #xbox{
-    background-image: url("xbox.jpeg");
+    background-image: url("imag/xbox.jpeg");
 height: 300px;
     width: 180px;
     
@@ -277,7 +277,7 @@ left: 5px;
 text-shadow:-10px -5px 10px #000; 
 }
 #playstore{
-    background-image: url("googleplay.jpeg");
+    background-image: url("imag/googleplay.jpeg");
 height: 300px;
     width: 180px;
 
@@ -314,7 +314,7 @@ left: 5px;
 text-shadow:-10px -5px 10px #000;
 }
 #callofduty{
-    background-image: url("callofduty.jpeg");
+    background-image: url("imag/callofduty.jpeg");
 height: 300px;
     width: 180px;
     background-size: cover;
@@ -333,7 +333,7 @@ left: 5px;
 text-shadow:-10px -5px 10px #000;
 }
 #minecraft{
-    background-image: url("minecraft.jpeg");
+    background-image: url("imag/minecraft.jpeg");
 height: 300px;
     width: 180px;
     
@@ -352,7 +352,7 @@ left: 5px;
 text-shadow:-10px -5px 10px #000;
 }
 #gta6{
-    background-image: url("gta6.jpeg");
+    background-image: url("imag/gta6.jpeg");
 height: 300px;
     width: 180px;
     
